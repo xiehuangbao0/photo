@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品详情 - 光影存证</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/photo-style.css">
+</head>
+<body>
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">×</span>
+        <span class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</span>
+        <span class="lightbox-nav lightbox-next" id="lightboxNext">›</span>
+        <img class="lightbox-img" id="lightboxImg" src="">
+        <div class="lightbox-info" id="lightboxInfo"></div>
+        <div class="lightbox-zoom-hint" id="lightboxZoomHint">点击放大 · 滚轮缩放 · 拖动查看</div>
+    </div>
+
+    <button class="theme-toggle" id="themeToggle" title="切换深色/浅色模式">🌙</button>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">光影存证</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="ranking.html">人气榜</a></li>
+                    <li><a href="winners.html">获奖展厅</a></li>
+                    <li><a href="market.html">版权集市</a></li>
+                    <li><a href="publish.html">我要投稿</a></li>
+                    <li><a href="blockchain.html">链上查询</a></li>
+                    <li><a href="about.html">平台介绍</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="guestMenu">
+                    <li><a href="login.html" class="login-btn">登录</a></li>
+                    <li><a href="register.html" class="register-btn">注册</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="loginMenu" style="display:none;">
+                    <li><span class="navbar-text text-white">欢迎：<span id="showNick"></span></span></li>
+                    <li><a href="person-info.html">个人中心</a></li>
+                    <li><button class="btn btn-danger btn-xs navbar-btn" id="logoutBtn">退出登录</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="notification-banner">
+        <div class="notification-scroll" id="notificationContent"></div>
+    </div>
+
+    <div class="container main-content">
+        <div id="detailBox"></div>
+        <div id="commentSection" class="mt-5">
+            <h3>💬 评论互动</h3>
+            <div id="commentInputArea" class="panel panel-default mt-3">
+                <div class="panel-body">
+                    <textarea id="commentInput" rows="3" class="form-control mb-3" placeholder="写下你的评论..."></textarea>
+                    <button class="btn btn-primary" id="submitCommentBtn">发布评论</button>
+                </div>
+            </div>
+            <div id="commentList" class="mt-4"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>2026光影存证 · 摄影作品投票存证平台 让每一束光都有据可查</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/web3-connector.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/blockchain.js"></script>
+    <script src="js/app.js?v=1.3.4"></script>
+</body>
+</html>

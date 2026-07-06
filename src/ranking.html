@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人气榜单 - 光影存证</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/photo-style.css">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" title="切换深色/浅色模式">🌙</button>
+    <button class="back-to-top" id="backToTop" title="返回顶部">⬆</button>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">光影存证</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="ranking.html">人气榜</a></li>
+                    <li><a href="winners.html">获奖展厅</a></li>
+                    <li><a href="market.html">版权集市</a></li>
+                    <li><a href="publish.html">我要投稿</a></li>
+                    <li><a href="blockchain.html">链上查询</a></li>
+                    <li><a href="about.html">平台介绍</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="guestMenu">
+                    <li><a href="login.html" class="login-btn">登录</a></li>
+                    <li><a href="register.html" class="register-btn">注册</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="loginMenu" style="display:none;">
+                    <li><span class="navbar-text text-white">欢迎：<span id="showNick"></span></span></li>
+                    <li><a href="person-info.html">个人中心</a></li>
+                    <li><button class="btn btn-danger btn-xs navbar-btn" id="logoutBtn">退出登录</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="notification-banner">
+        <div class="notification-scroll" id="notificationContent"></div>
+    </div>
+
+    <div class="container main-content">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="text-center">🏅 人气榜单</h2>
+            </div>
+            <div class="panel-body">
+                <div class="btn-group mb-4" style="width: 100%;">
+                    <button class="btn btn-primary active" id="tabTotal" style="width: 33.33%;">实时总榜</button>
+                    <button class="btn btn-default" id="tabTournament" style="width: 33.33%;">单赛事榜单</button>
+                    <button class="btn btn-default" id="tabEnded" style="width: 33.34%;">已结束赛事</button>
+                </div>
+                
+                <div class="row mb-4" id="tournamentFilter" style="display:none;">
+                    <div class="col-md-6">
+                        <label>选择赛事：</label>
+                        <select id="tournamentSelect" class="form-control">
+                            <option value="">全部赛事</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label>作品类别：</label>
+                        <select id="categoryFilter" class="form-control">
+                            <option value="">全部类别</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="rankingList" class="row"></div>
+                
+                <div class="pagination-wrapper text-center" id="paginationWrapper"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>2026光影存证 · 摄影作品投票存证平台 让每一束光都有据可查</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/app.js?v=1.3.5"></script>
+</body>
+</html>

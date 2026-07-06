@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平台介绍 - 光影存证</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/photo-style.css">
+    <style>
+        .about-section {
+            padding: 40px 0;
+        }
+        .about-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #6f42c1;
+            font-weight: bold;
+        }
+        .about-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .about-card .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .about-card h3 {
+            color: #6f42c1;
+            margin-bottom: 15px;
+        }
+        .about-card ul {
+            padding-left: 20px;
+        }
+        .about-card li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        .process-step {
+            text-align: center;
+            padding: 30px;
+        }
+        .process-step .step-num {
+            background: #6f42c1;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        .process-step h4 {
+            color: #6f42c1;
+            margin-bottom: 10px;
+        }
+        .tech-item {
+            padding: 20px;
+            border-left: 4px solid #6f42c1;
+            margin-bottom: 20px;
+            background: #f8f9fa;
+            border-radius: 0 8px 8px 0;
+        }
+        .tech-item h4 {
+            color: #6f42c1;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" title="切换深色/浅色模式">🌙</button>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">光影存证</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="ranking.html">人气榜</a></li>
+                    <li><a href="winners.html">获奖展厅</a></li>
+                    <li><a href="market.html">版权集市</a></li>
+                    <li><a href="publish.html">我要投稿</a></li>
+                    <li><a href="blockchain.html">链上查询</a></li>
+                    <li><a href="about.html">平台介绍</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="guestMenu">
+                    <li><a href="login.html" class="login-btn">登录</a></li>
+                    <li><a href="register.html" class="register-btn">注册</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="loginMenu" style="display:none;">
+                    <li><span class="navbar-text text-white">欢迎：<span id="showNick"></span></span></li>
+                    <li><a href="person-info.html">个人中心</a></li>
+                    <li><button class="btn btn-danger btn-xs navbar-btn" id="logoutBtn">退出登录</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="notification-banner">
+        <div class="notification-scroll" id="notificationContent"></div>
+    </div>
+
+    <div class="container">
+        <div class="about-section">
+            <h2>📋 平台简介</h2>
+            <div class="about-card">
+                <p style="font-size: 16px; line-height: 1.8; color: #666;text-align: center;">
+                    光影存证是一个基于区块链技术的摄影赛事与版权确权平台
+                    <br>致力于解决摄影师原创作品被盗用、赛事线上化困难等行业痛点。
+                    <br>我们将区块链存证技术与摄影赛事完美结合，
+                    <br>为每一幅作品提供不可篡改的数字凭证，
+                    <br>让创作者的权益得到切实保障。
+                </p>
+                <p style="font-size: 16px; line-height: 1.8; color: #666;text-align: center;">
+                   <br>无论是专业摄影师还是摄影爱好者，<br>都可以在这里参加各类线上摄影赛事，展示作品，获得认可；
+                    <br>同时，平台提供版权交易功能，让优秀作品实现商业价值转化。
+                </p>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>🚀 核心功能</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-card">
+                        <div class="icon">📸</div>
+                        <h3>线上摄影赛事</h3>
+                        <ul>
+                            <li>丰富多样的主题赛事，涵盖风光、人像、夜景等多个领域</li>
+                            <li>完整的线上投稿流程，支持图片上传、作品描述</li>
+                            <li>大众投票机制，公平公正的奖项评选</li>
+                            <li>获奖作品展示，提升摄影师知名度</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-card">
+                        <div class="icon">⛓️</div>
+                        <h3>区块链版权存证</h3>
+                        <ul>
+                            <li>作品上传自动生成唯一哈希凭证</li>
+                            <li>区块链存证，数据不可篡改</li>
+                            <li>存证凭证可用于维权举证</li>
+                            <li>一键查询作品存证信息</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-card">
+                        <div class="icon">💰</div>
+                        <h3>版权集市</h3>
+                        <ul>
+                            <li>摄影作品商用授权交易</li>
+                            <li>多种授权模式选择</li>
+                            <li>安全的区块链支付结算</li>
+                            <li>透明的交易记录</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-card">
+                        <div class="icon">🏆</div>
+                        <h3>作品展厅</h3>
+                        <ul>
+                            <li>获奖作品精美展示</li>
+                            <li>人气榜单实时更新</li>
+                            <li>作品详情与投票互动</li>
+                            <li>摄影师个人作品集</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>🔐 技术优势</h2>
+            <div class="tech-item">
+                <h4>🔑 区块链存证原理</h4>
+                <p style="color: #666; line-height: 1.8;">
+                    平台采用以太坊区块链技术，当作品上传时，系统会自动计算作品的哈希值，并将哈希值、作品信息、时间戳等数据写入区块链。
+                    由于区块链的去中心化特性，一旦数据写入，任何人都无法篡改，确保了作品版权归属的真实性和不可否认性。
+                </p>
+            </div>
+            <div class="tech-item">
+                <h4>⚖️ 存证凭证法律效力</h4>
+                <p style="color: #666; line-height: 1.8;">
+                    根据《中华人民共和国电子签名法》和《区块链信息服务管理规定》，区块链存证数据具有法律效力，可作为维权举证的有效证据。
+                    平台生成的存证凭证包含完整的存证信息，可直接用于版权纠纷诉讼。
+                </p>
+            </div>
+            <div class="tech-item">
+                <h4>🛡️ 数据安全保障</h4>
+                <p style="color: #666; line-height: 1.8;">
+                    平台采用多层安全防护机制：数据传输采用HTTPS加密，用户信息采用AES-256加密存储，智能合约经过安全审计。
+                    同时，平台定期进行数据备份，确保用户作品和信息的安全可靠。
+                </p>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>📝 使用流程</h2>
+            <div class="row">
+                <div class="col-md-2 process-step">
+                    <div class="step-num">1</div>
+                    <h4>注册入驻</h4>
+                    <p style="color: #666;">注册账号，完成实名认证，成为平台用户</p>
+                </div>
+                <div class="col-md-2 process-step">
+                    <div class="step-num">2</div>
+                    <h4>选择赛事</h4>
+                    <p style="color: #666;">浏览平台赛事，选择感兴趣的赛事报名</p>
+                </div>
+                <div class="col-md-2 process-step">
+                    <div class="step-num">3</div>
+                    <h4>上传作品</h4>
+                    <p style="color: #666;">上传原创摄影作品，填写作品描述</p>
+                </div>
+                <div class="col-md-2 process-step">
+                    <div class="step-num">4</div>
+                    <h4>链上存证</h4>
+                    <p style="color: #666;">作品自动生成哈希凭证，完成区块链存证</p>
+                </div>
+                <div class="col-md-2 process-step">
+                    <div class="step-num">5</div>
+                    <h4>投票评选</h4>
+                    <p style="color: #666;">参与投票，获得大众认可</p>
+                </div>
+                <div class="col-md-2 process-step">
+                    <div class="step-num">6</div>
+                    <h4>版权交易</h4>
+                    <p style="color: #666;">作品获奖后可上架版权集市进行交易</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>❤️ 关于我们</h2>
+            <div class="about-card">
+                <h3 style="text-align:center;">平台开发初衷</h3>
+                <p style="color: #666; line-height: 1.8; margin-bottom: 20px;text-align: center;">
+                    光影存证团队由一群热爱摄影和区块链技术的开发者组成。<br>我们深知摄影师创作的艰辛，也目睹了太多优秀作品被无偿盗用的现象。
+                    <br>正是出于对创作者权益的保护，我们开发了这个平台，<br>希望通过区块链技术为摄影创作者提供一个安全、公正的展示和交易环境。
+                </p>
+                <h3 style="text-align:center;">服务理念</h3>
+                <p style="color: #666; line-height: 1.8;margin-bottom: 10px;text-align: center;">
+                   我们始终坚持"让每一束光都有据可查"的理念，<br>致力于打造国内领先的摄影赛事与版权确权平台。
+                    <br>未来，我们将不断优化平台功能，拓展赛事品类，<br>为摄影创作者提供更好的服务，让优秀作品得到应有的价值回报。
+                </p>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>📝 意见反馈</h2>
+            <div class="about-card text-center">
+                <p style="color: #666; margin-bottom: 20px;">
+                    欢迎您对平台提出宝贵意见和建议！<br>您的反馈是我们进步的动力。
+                </p>
+                <button class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #6f42c1 0%, #845ef7 100%); border: none; border-radius: 25px; padding: 12px 40px; font-weight: bold;" onclick="showFeedbackModal()">提交意见反馈</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>2026光影存证 · 摄影作品投票存证平台 让每一束光都有据可查</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/app.js?v=1.3.4"></script>
+</body>
+</html>

@@ -1,0 +1,532 @@
+[
+    {
+        "id": 1,
+        "workName": "城市日落",
+        "img": "images/城市日落.png",
+        "authorAccount": "user001",
+        "authorNick": "风光摄影师阿凯",
+        "category": "风光摄影",
+        "desc": "城市天台日落长曝光摄影，记录都市温柔黄昏光影，采用f/8小光圈拍摄。",
+        "voteCount": 128,
+        "status": "online",
+        "equipment": "佳能EOS R6 + 24-70mm f/2.8",
+        "createTime": "2026-06-15",
+        "hash": "0x1a3e5b7c9d2f4a6b8c0d1e3f5a7b9c1d",
+        "txHash": "0x7f9e8d6c4b2a0e1f3d5c7b9a8e6d4c2b",
+        "tournamentId": 1,
+        "comments": [
+            {
+                "id": 1,
+                "userId": "user002",
+                "userNick": "摄影爱好者",
+                "content": "构图很棒！",
+                "time": "2026-06-16 10:30",
+                "replies": []
+            },
+            {
+                "id": 2,
+                "userId": "user003",
+                "userNick": "光影捕捉者",
+                "content": "黄昏的色调太美了",
+                "time": "2026-06-16 14:20",
+                "replies": [
+                    {
+                        "id": 1,
+                        "userId": "user001",
+                        "userNick": "风光摄影师阿凯",
+                        "content": "谢谢！等了好久才等到这个光线",
+                        "time": "2026-06-16 15:00"
+                    }
+                ]
+            }
+        ],
+        "collectedBy": [
+            "user002",
+            "user004"
+        ],
+        "price": 209
+    },
+    {
+        "id": 2,
+        "workName": "老街",
+        "img": "images/老街.png",
+        "authorAccount": "user002",
+        "authorNick": "纪实小夏",
+        "category": "纪实人文",
+        "desc": "老城区老街巷纪实抓拍，还原市井烟火气息，使用35mm定焦镜头。",
+        "voteCount": 96,
+        "status": "online",
+        "equipment": "索尼A7M4 + 35mm f/1.8",
+        "createTime": "2026-06-18",
+        "hash": "0x2b4f6d8e0c1a3b5d7f9a0c2e4b6d8f0a",
+        "txHash": "0x8a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d",
+        "tournamentId": 1,
+        "comments": [],
+        "collectedBy": [
+            "user001"
+        ],
+        "price": 240
+    },
+    {
+        "id": 3,
+        "workName": "山野溪流",
+        "img": "images/溪流.png",
+        "authorAccount": "user003",
+        "authorNick": "自然摄影阿泽",
+        "category": "自然风光",
+        "desc": "深山林间溪流慢门摄影，水流雾化效果，三脚架长曝光拍摄。",
+        "voteCount": 205,
+        "status": "online",
+        "equipment": "尼康Z8 + 16-35mm f/4",
+        "createTime": "2026-06-20",
+        "hash": "0x3c5a7b9d1e2f4a6b8c0d1e3f5a7b9c1d",
+        "txHash": "0x9b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e",
+        "tournamentId": 1,
+        "comments": [
+            {
+                "id": 1,
+                "userId": "user001",
+                "userNick": "风光摄影师阿凯",
+                "content": "慢门效果太棒了",
+                "time": "2026-06-21 09:15",
+                "replies": []
+            }
+        ],
+        "collectedBy": [
+            "user002",
+            "user003",
+            "user005"
+        ],
+        "price": 395
+    },
+    {
+        "id": 4,
+        "workName": "雨夜",
+        "img": "images/雨夜.png",
+        "authorAccount": "user001",
+        "authorNick": "风光摄影师阿凯",
+        "category": "夜景摄影",
+        "desc": "雨夜街道散景光斑摄影，大光圈虚化背景，氛围感夜景创作。",
+        "voteCount": 72,
+        "status": "online",
+        "equipment": "佳能EOS R6 + 50mm f/1.2",
+        "createTime": "2026-06-22",
+        "hash": "0x4d6b8a0c2e4f6d8e0c1a3b5d7f9a0c2e",
+        "txHash": "0xac2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f",
+        "tournamentId": 2,
+        "comments": [],
+        "collectedBy": [],
+        "price": 561
+    },
+    {
+        "id": 5,
+        "workName": "江南",
+        "img": "images/江南.png",
+        "authorAccount": "user004",
+        "authorNick": "静物摄影师小林",
+        "category": "静物摄影",
+        "desc": "窗台静物布置，午后阳光透过窗帘洒落在茶具上，宁静惬意。",
+        "voteCount": 45,
+        "status": "pending",
+        "equipment": "富士GFX 50S + 120mm f/4",
+        "createTime": "2026-06-25",
+        "hash": "",
+        "txHash": "",
+        "tournamentId": 2,
+        "comments": [],
+        "collectedBy": [],
+        "price": 735
+    },
+    {
+        "id": 6,
+        "workName": "江南水乡",
+        "img": "images/江南.png",
+        "authorAccount": "user005",
+        "authorNick": "人文摄影小王",
+        "category": "人文摄影",
+        "desc": "江南古镇青石板路，烟雨朦胧中的油纸伞，古韵悠长。",
+        "voteCount": 88,
+        "status": "online",
+        "equipment": "徕卡Q3",
+        "createTime": "2026-06-28",
+        "hash": "0x5e7c9b1d3f5a7b9c1d3e5b7c9d2f4a6b",
+        "txHash": "0xbd3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a",
+        "tournamentId": 2,
+        "comments": [],
+        "collectedBy": [
+            "user001",
+            "user002"
+        ],
+        "price": 157
+    },
+    {
+        "id": 7,
+        "workName": "海边日落",
+        "img": "images/海边日落.png",
+        "authorAccount": "user006",
+        "authorNick": "海景摄影师大海",
+        "category": "自然风光",
+        "desc": "清晨海边日出，金色阳光洒在波光粼粼的海面上，令人心旷神怡。",
+        "voteCount": 167,
+        "status": "online",
+        "equipment": "索尼A1 + 24-70mm f/2.8",
+        "createTime": "2026-06-10",
+        "hash": "0x6f8a0b2d4e6c8a0b2d4f6a8c0e2g4h6j",
+        "txHash": "0xcd4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a",
+        "tournamentId": 1,
+        "comments": [],
+        "collectedBy": [
+            "user003",
+            "user005"
+        ],
+        "price": 83
+    },
+    {
+        "id": 8,
+        "workName": "星空银河",
+        "img": "images/星空银河.png",
+        "authorAccount": "user007",
+        "authorNick": "星空猎人",
+        "category": "风光摄影",
+        "desc": "远离城市光污染的高山之巅，银河横跨天际，繁星点点。",
+        "voteCount": 234,
+        "status": "online",
+        "equipment": "尼康Z9 + 14-24mm f/2.8",
+        "createTime": "2026-06-08",
+        "hash": "0x7g9b1c3d5e7f9a1b3d5f7a9c1e3g5i7k",
+        "txHash": "0xde5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b",
+        "tournamentId": 1,
+        "comments": [
+            {
+                "id": 1,
+                "userId": "user001",
+                "userNick": "风光摄影师阿凯",
+                "content": "银河太震撼了！",
+                "time": "2026-06-09 22:00",
+                "replies": []
+            }
+        ],
+        "collectedBy": [
+            "user001",
+            "user002",
+            "user004",
+            "user006"
+        ],
+        "price": 672
+    },
+    {
+        "id": 9,
+        "workName": "霓虹都市",
+        "img": "images/霓虹都市.png",
+        "authorAccount": "user008",
+        "authorNick": "都市夜猫子",
+        "category": "夜景摄影",
+        "desc": "繁华都市夜景，霓虹灯闪烁，赛博朋克风格的城市风光。",
+        "voteCount": 145,
+        "status": "online",
+        "equipment": "佳能EOS R5 + 35mm f/1.4",
+        "createTime": "2026-06-12",
+        "hash": "0x8h0c2d4e6f8a0b2d4f6a8c0e2g4h6j8l",
+        "txHash": "0xef6g7b8c9d0e1f2a3b4c5d6e7f8a9b0c",
+        "tournamentId": 2,
+        "comments": [],
+        "collectedBy": [
+            "user007"
+        ],
+        "price": 733
+    },
+    {
+        "id": 10,
+        "workName": "古镇灯火",
+        "img": "images/古镇灯火.png",
+        "authorAccount": "user009",
+        "authorNick": "古韵追寻者",
+        "category": "夜景摄影",
+        "desc": "古镇夜晚灯火通明，灯笼高挂，宛如穿越回古代。",
+        "voteCount": 112,
+        "status": "online",
+        "equipment": "富士X-T5 + 23mm f/1.4",
+        "createTime": "2026-06-14",
+        "hash": "0x9i1d3e5g7i9k1m3o5q7s9u1w3y5a7c9e1g",
+        "txHash": "0xfg7h8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e",
+        "tournamentId": 2,
+        "comments": [],
+        "collectedBy": [
+            "user002",
+            "user005"
+        ],
+        "price": 322
+    },
+    {
+        "id": 11,
+        "workName": "春日花语",
+        "img": "images/春日花语.png",
+        "authorAccount": "user010",
+        "authorNick": "人像大师小花",
+        "category": "人像摄影",
+        "desc": "春日花海中的少女，樱花飘落，唯美浪漫。",
+        "voteCount": 312,
+        "status": "online",
+        "equipment": "佳能EOS R6 Mark II + 85mm f/1.2",
+        "createTime": "2026-04-15",
+        "hash": "0xa2e4f6h8j0l2n4p6r8t0v2x4z6b8d0f2h4",
+        "txHash": "0xgh8i9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f",
+        "tournamentId": 3,
+        "comments": [
+            {
+                "id": 1,
+                "userId": "user001",
+                "userNick": "风光摄影师阿凯",
+                "content": "太美了，人景合一！",
+                "time": "2026-04-16 10:00",
+                "replies": []
+            },
+            {
+                "id": 2,
+                "userId": "user003",
+                "userNick": "自然摄影阿泽",
+                "content": "光线运用得很棒",
+                "time": "2026-04-16 16:30",
+                "replies": []
+            }
+        ],
+        "collectedBy": [
+            "user001",
+            "user003",
+            "user006",
+            "user007",
+            "user008"
+        ],
+        "price": 377
+    },
+    {
+        "id": 12,
+        "workName": "青春记忆",
+        "img": "images/青春记忆.png",
+        "authorAccount": "user011",
+        "authorNick": "校园摄影师",
+        "category": "人像摄影",
+        "desc": "校园青春人像，阳光下的笑容，充满活力与朝气。",
+        "voteCount": 268,
+        "status": "online",
+        "equipment": "索尼A7M5 + 50mm f/1.4",
+        "createTime": "2026-04-20",
+        "hash": "0xb3f5g7i9k1m3o5q7s9u1w3y5a7c9e1g3i5",
+        "txHash": "0hi9j0d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4g",
+        "tournamentId": 3,
+        "comments": [],
+        "collectedBy": [
+            "user002",
+            "user004",
+            "user009"
+        ],
+        "price": 782
+    },
+    {
+        "id": 13,
+        "workName": "古风雅致",
+        "img": "images/古风雅致.png",
+        "authorAccount": "user012",
+        "authorNick": "汉服摄影师大龙",
+        "category": "艺术摄影",
+        "desc": "汉服古风人像，亭台楼阁，古典雅致，尽显东方韵味。",
+        "voteCount": 245,
+        "status": "online",
+        "equipment": "尼康Z8 + 105mm f/1.4",
+        "createTime": "2026-04-25",
+        "hash": "0xc4g6h8j0l2n4p6r8t0v2x4z6b8d0f2h4j6",
+        "txHash": "0ij0k1d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4g5h",
+        "tournamentId": 3,
+        "comments": [
+            {
+                "id": 1,
+                "userId": "user005",
+                "userNick": "人文摄影小王",
+                "content": "古风韵味十足！",
+                "time": "2026-04-26 09:30",
+                "replies": []
+            }
+        ],
+        "collectedBy": [
+            "user001",
+            "user005",
+            "user007"
+        ],
+        "price": 588
+    },
+    {
+        "id": 14,
+        "workName": "街头舞者",
+        "img": "images/街头舞者.png",
+        "authorAccount": "user013",
+        "authorNick": "街头摄影师",
+        "category": "纪实摄影",
+        "desc": "街头舞者即兴表演，动感十足，展现城市街头文化。",
+        "voteCount": 189,
+        "status": "online",
+        "equipment": "徕卡Q3 + 固定镜头",
+        "createTime": "2026-05-01",
+        "hash": "0xd5h7i9k1m3o5q7s9u1w3y5a7c9e1g3i5k7",
+        "txHash": "0jk1l2d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4g5h6i",
+        "tournamentId": 3,
+        "comments": [],
+        "collectedBy": [
+            "user003"
+        ],
+        "price": 724
+    },
+    {
+        "id": 15,
+        "workName": "古镇匠人",
+        "img": "images/古镇匠人.png",
+        "authorAccount": "user014",
+        "authorNick": "非遗记录者",
+        "category": "纪实摄影",
+        "desc": "古镇老匠人专注手工艺制作，传承非物质文化遗产。",
+        "voteCount": 176,
+        "status": "online",
+        "equipment": "富士GFX 100S + 63mm f/2.8",
+        "createTime": "2026-05-05",
+        "hash": "0xe6i8j0l2n4p6r8t0v2x4z6b8d0f2h4j6l8",
+        "txHash": "0kl2m3d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4g5h6i7j",
+        "tournamentId": 3,
+        "comments": [],
+        "collectedBy": [
+            "user002",
+            "user006"
+        ],
+        "price": 512
+    },
+    {
+        "id": 16,
+        "workName": "雪山之巅",
+        "img": "images/雪山之巅.png",
+        "authorAccount": "user015",
+        "authorNick": "雪山探险家",
+        "category": "自然风光",
+        "desc": "巍峨雪山之巅，阳光照耀下的雪峰闪耀着金色光芒。",
+        "voteCount": 428,
+        "status": "online",
+        "equipment": "尼康Z9 + 70-200mm f/2.8",
+        "createTime": "2026-01-20",
+        "hash": "0xf7j9k1m3o5q7s9u1w3y5a7c9e1g3i5k7m9",
+        "txHash": "0lm3n4d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4g5h6i7j8k",
+        "tournamentId": 4,
+        "comments": [
+            {
+                "id": 1,
+                "userId": "user001",
+                "userNick": "风光摄影师阿凯",
+                "content": "雪山太壮观了！",
+                "time": "2026-01-21 15:00",
+                "replies": []
+            }
+        ],
+        "collectedBy": [
+            "user001",
+            "user003",
+            "user005",
+            "user007"
+        ],
+        "price": 357
+    },
+    {
+        "id": 17,
+        "workName": "冰雪奇缘",
+        "img": "images/冰雪奇缘.png",
+        "authorAccount": "user016",
+        "authorNick": "冰雪摄影师",
+        "category": "冰雪摄影",
+        "desc": "冰面上的冰晶在阳光折射下呈现出七彩光芒，如同童话世界。",
+        "voteCount": 356,
+        "status": "online",
+        "equipment": "索尼A7R V + 24-70mm f/2.8",
+        "createTime": "2026-01-25",
+        "hash": "0xg8k2n4p6r8t0v2x4z6b8d0f2h4j6l8n0",
+        "txHash": "0mn4o5d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4g5h6i7j8k9l",
+        "tournamentId": 4,
+        "comments": [],
+        "collectedBy": [
+            "user002",
+            "user004",
+            "user008"
+        ],
+        "price": 460
+    },
+    {
+        "id": 18,
+        "workName": "雾凇奇观",
+        "img": "images/雾凇奇观.png",
+        "authorAccount": "user017",
+        "authorNick": "自然摄影师小李",
+        "category": "风光摄影",
+        "desc": "挂满雾凇的树林，银装素裹，如同仙境般美丽。",
+        "voteCount": 298,
+        "status": "online",
+        "equipment": "佳能EOS R3 + 16-35mm f/2.8",
+        "createTime": "2026-02-05",
+        "hash": "0yh9m3o5q7s9u1w3y5a7c9e1g3i5k7m9o1",
+        "txHash": "0no5p6d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4g5h6i7j8k9l0m",
+        "tournamentId": 4,
+        "comments": [
+            {
+                "id": 1,
+                "userId": "user005",
+                "userNick": "人文摄影小王",
+                "content": "雾凇太美了！",
+                "time": "2026-02-06 10:00",
+                "replies": []
+            }
+        ],
+        "collectedBy": [
+            "user001",
+            "user005",
+            "user006"
+        ],
+        "price": 624
+    },
+    {
+        "id": 19,
+        "workName": "雪乡童话",
+        "img": "images/雪乡童话.png",
+        "authorAccount": "user018",
+        "authorNick": "东北摄影达人",
+        "category": "自然风光",
+        "desc": "雪乡的小木屋被厚厚的积雪覆盖，红灯笼高高挂起，温馨浪漫。",
+        "voteCount": 234,
+        "status": "online",
+        "equipment": "富士X-T5 + 35mm f/1.4",
+        "createTime": "2026-02-10",
+        "hash": "0zi0n4p6r8t0v2x4z6b8d0f2h4j6l8n0p2",
+        "txHash": "0op6q7d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4g5h6i7j8k9l0m1n",
+        "tournamentId": 4,
+        "comments": [],
+        "collectedBy": [
+            "user003",
+            "user007"
+        ],
+        "price": 293
+    },
+    {
+        "id": 20,
+        "workName": "冰湖倒影",
+        "img": "images/冰湖倒影.png",
+        "authorAccount": "user019",
+        "authorNick": "创意摄影大师",
+        "category": "冰雪摄影",
+        "desc": "结冰的湖面倒映着远处的雪山，天地合一，意境深远。",
+        "voteCount": 189,
+        "status": "online",
+        "equipment": "尼康Z8 + 24-120mm f/4",
+        "createTime": "2026-02-15",
+        "hash": "0aj1o5q7s9u1w3y5a7c9e1g3i5k7m9o1q3",
+        "txHash": "0pq7r8d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4g5h6i7j8k9l0m1n2o",
+        "tournamentId": 4,
+        "comments": [],
+        "collectedBy": [
+            "user002",
+            "user004"
+        ],
+        "price": 814
+    }
+]

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面不存在</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/photo-style.css">
+</head>
+<body>
+    <!-- 主题切换按钮 -->
+    <button class="theme-toggle" id="themeToggle" title="切换深色/浅色模式">🌙</button>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-center">
+                    <li><a href="index.html" class="navbar-center">📸 摄影作品投票系统</a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html#tournaments">🏆 赞事中心</a></li>
+                    <li><a href="ranking.html">🏅 人气榜单</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="guestMenu">
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                    <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="error-page">
+            <div class="error-code">404</div>
+            <div class="error-title">页面不存在</div>
+            <div class="error-desc">
+                您访问的页面可能已被删除、移动或不存在。<br>
+                请检查您输入的网址是否正确，或点击下方按钮返回首页。
+            </div>
+            <a href="index.html" class="btn btn-primary btn-lg">返回首页</a>
+            <a href="ranking.html" class="btn btn-default btn-lg" style="margin-left: 15px;">查看榜单</a>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/user.js"></script>
+</body>
+</html>

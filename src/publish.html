@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品投稿 - 光影存证</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/photo-style.css">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" title="切换深色/浅色模式">🌙</button>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">光影存证</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="ranking.html">人气榜</a></li>
+                    <li><a href="winners.html">获奖展厅</a></li>
+                    <li><a href="market.html">版权集市</a></li>
+                    <li><a href="publish.html">我要投稿</a></li>
+                    <li><a href="blockchain.html">链上查询</a></li>
+                    <li><a href="about.html">平台介绍</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="guestMenu">
+                    <li><a href="login.html" class="login-btn">登录</a></li>
+                    <li><a href="register.html" class="register-btn">注册</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="loginMenu" style="display:none;">
+                    <li><span class="navbar-text text-white">欢迎：<span id="showNick"></span></span></li>
+                    <li><a href="person-info.html">个人中心</a></li>
+                    <li><button class="btn btn-danger btn-xs navbar-btn" id="logoutBtn">退出登录</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="notification-banner">
+        <div class="notification-scroll" id="notificationContent"></div>
+    </div>
+
+    <div class="container main-content">
+        <div id="publishContent">
+            <div class="panel panel-default">
+                <div class="panel-heading">✨ 作品投稿</div>
+                <div class="panel-body">
+                    <form id="publishForm">
+                        <div class="form-group">
+                            <label>选择赛事 <span class="text-danger">*</span></label>
+                            <select class="form-control" id="tournament" required>
+                                <option value="">请选择赛事</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>作品名称 <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="workName" placeholder="请输入作品名称" required>
+                        </div>
+                        <div class="form-group">
+                            <label>摄影分类</label>
+                            <select class="form-control" id="category">
+                                <option value="风光摄影">风光摄影</option>
+                                <option value="自然风光">自然风光</option>
+                                <option value="人像摄影">人像摄影</option>
+                                <option value="纪实人文">纪实人文</option>
+                                <option value="人文摄影">人文摄影</option>
+                                <option value="夜景摄影">夜景摄影</option>
+                                <option value="静物摄影">静物摄影</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>拍摄器材</label>
+                            <input type="text" class="form-control" id="equipment" placeholder="例如：佳能EOS R6 + 24-70mm f/2.8">
+                        </div>
+                        <div class="form-group">
+                            <label>版权价格 (元) <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" id="price" min="0" placeholder="请输入作品版权授权价格（元）" required>
+                        </div>
+                        <div class="form-group">
+                            <label>创作简介</label>
+                            <textarea class="form-control" id="desc" rows="3" placeholder="描述你的创作思路和拍摄过程"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>上传作品图片</label>
+                            <input type="file" id="imgInput" accept="image/*">
+                            <img id="previewImg" class="img-responsive" style="max-width:300px;display:none;">
+                        </div>
+                        <button type="submit" class="btn btn-primary">提交投稿</button>
+                    </form>
+                </div>
+            </div>
+            <div id="blockchainInfo" style="display:none;">
+                <h4>📋 区块链存证信息</h4>
+                <p>图片哈希：<span id="imageHash"></span></p>
+                <p>交易哈希：<span id="txHash"></span></p>
+            </div>
+        </div>
+        <div id="noPermissionContent" style="display:none;">
+            <div class="panel panel-default">
+                <div class="panel-heading">🚫 权限不足</div>
+                <div class="panel-body text-center py-10">
+                    <h3 class="text-danger mb-4">❌ 普通投票用户无法投稿</h3>
+                    <p class="text-secondary mb-4">投稿功能仅限摄影师账号使用</p>
+                    <p class="text-secondary mb-4">如果您是摄影师，请注册摄影师账号</p>
+                    <a href="register.html" class="btn btn-primary">注册摄影师账号</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>2026光影存证 · 摄影作品投票存证平台 让每一束光都有据可查</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/app.js?v=1.3.4"></script>
+</body>
+</html>

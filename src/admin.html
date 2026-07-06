@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员后台 - 光影存证</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/photo-style.css">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" title="切换深色/浅色模式">🌙</button>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="admin.html">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">管理员后台</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="ranking.html">人气榜</a></li>
+                    <li><a href="publish.html">我要投稿</a></li>
+                    <li><a href="about.html">平台介绍</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><span class="navbar-text text-white">欢迎：<span id="showNick"></span></span></li>
+                    <li><a href="person-info.html">个人中心</a></li>
+                    <li><button class="btn btn-danger btn-xs navbar-btn" id="logoutBtn">退出登录</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="notification-banner">
+        <div class="notification-scroll" id="notificationContent"></div>
+    </div>
+
+    <div class="container main-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading bg-primary text-white text-center">📋 管理菜单</div>
+                    <div class="list-group">
+                        <button class="list-group-item active" id="menuDashboard">📊 数据看板</button>
+                        <button class="list-group-item" id="menuUsers">👥 用户管理</button>
+                        <button class="list-group-item" id="menuWorks">📸 作品审核</button>
+                        <button class="list-group-item" id="menuCertify">🔗 作品存证</button>
+                        <button class="list-group-item" id="menuComments">💬 评论管理</button>
+                        <button class="list-group-item" id="menuTournaments">🏆 赛事管理</button>
+                        <button class="list-group-item" id="menuBlockchain">🔗 链上查询</button>
+                        <button class="list-group-item" id="menuAnnouncements">📢 公告管理</button>
+                        <button class="list-group-item" id="menuFeedback">📝 意见反馈</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-10">
+                <div class="panel panel-default" id="contentDashboard">
+                    <div class="panel-heading">📊 数据可视化看板</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="stat-card">
+                                    <div class="stat-icon">👤</div>
+                                    <div class="fs-3" id="statUsers">0</div>
+                                    <div class="text-white opacity-80">注册用户数</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-card" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;">
+                                    <div class="stat-icon">📸</div>
+                                    <div class="fs-3" id="statWorks">0</div>
+                                    <div class="text-white opacity-80">投稿作品数</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-card" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;">
+                                    <div class="stat-icon">🗳️</div>
+                                    <div class="fs-3" id="statVotes">0</div>
+                                    <div class="text-white opacity-80">总投票数</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-card" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;">
+                                    <div class="stat-icon">⏳</div>
+                                    <div class="fs-3" id="statPending">0</div>
+                                    <div class="text-white opacity-80">待审核作品</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <h4>📁 作品分类统计</h4>
+                            <div class="row" id="categoryStats"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default" id="contentUsers" style="display:none;">
+                    <div class="panel-heading">👥 用户管理</div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>账号</th>
+                                    <th>昵称</th>
+                                    <th>电话</th>
+                                    <th>注册时间</th>
+                                    <th>角色</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="userTable"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel panel-default" id="contentWorks" style="display:none;">
+                    <div class="panel-heading">📸 作品审核</div>
+                    <div class="panel-body">
+                        <div class="mb-3">
+                            <select id="auditFilter" class="form-control" style="width:200px;display:inline-block;">
+                                <option value="pending">⏳ 待审核</option>
+                                <option value="online">✅ 已上线</option>
+                                <option value="offline">❌ 已下架</option>
+                            </select>
+                        </div>
+                        <div class="row" id="auditWorksList"></div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default" id="contentCertify" style="display:none;">
+                    <div class="panel-heading">🔗 作品存证管理</div>
+                    <div class="panel-body">
+                        <div class="mb-3">
+                            <select id="certifyFilter" class="form-control" style="width:200px;display:inline-block;">
+                                <option value="notOnChain">❌ 未存证</option>
+                                <option value="onChain">✅ 已存证</option>
+                                <option value="all">📋 全部作品</option>
+                            </select>
+                            <button class="btn btn-warning ml-3" id="certifyAllBtn">⚡ 一键全部存证</button>
+                        </div>
+                        <div class="row" id="certifyWorksList"></div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default" id="contentComments" style="display:none;">
+                    <div class="panel-heading">💬 评论管理</div>
+                    <div class="panel-body">
+                        <div id="commentManageList"></div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default" id="contentTournaments" style="display:none;">
+                    <div class="panel-heading">🏆 赛事管理</div>
+                    <div class="panel-body">
+                        <button class="btn btn-primary mb-3" id="addTournamentBtn">➕ 新增赛事</button>
+                        <div id="tournamentManageList"></div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default" id="contentBlockchain" style="display:none;">
+                    <div class="panel-heading">🔗 区块链管理</div>
+                    <div class="panel-body">
+                        <div class="row text-center mb-4">
+                            <div class="col-md-3">
+                                <div class="stat-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;">
+                                    <div class="stat-icon">📦</div>
+                                    <div class="fs-3" id="adminBlockCount">0</div>
+                                    <div class="text-white opacity-80">区块总数</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-card" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;">
+                                    <div class="stat-icon">✅</div>
+                                    <div class="fs-3" id="adminValidCount">0</div>
+                                    <div class="text-white opacity-80">已上链作品</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-card" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;">
+                                    <div class="stat-icon">⏳</div>
+                                    <div class="fs-3" id="adminPendingCount">0</div>
+                                    <div class="text-white opacity-80">待上链作品</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-card" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;">
+                                    <div class="stat-icon">🔐</div>
+                                    <div class="fs-3" id="adminTxCount">0</div>
+                                    <div class="text-white opacity-80">交易总数</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-danger mb-3" id="adminClearChainBtn">🗑️ 清空链数据</button>
+
+                        <div class="mb-3">
+                            <input type="text" id="chainSearch" class="form-control" style="width:50%;display:inline-block;" placeholder="输入作品哈希或交易哈希">
+                            <button class="btn btn-primary ml-2" id="chainSearchBtn">🔍 查询</button>
+                        </div>
+
+                        <h4>📋 区块列表</h4>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>用户账号</th>
+                                    <th>区块高度</th>
+                                    <th>区块哈希</th>
+                                    <th>交易数</th>
+                                    <th>时间</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminBlockList"></tbody>
+                        </table>
+
+                        <div id="chainResult"></div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default" id="contentAnnouncements" style="display:none;">
+                    <div class="panel-heading">📢 公告管理</div>
+                    <div class="panel-body">
+                        <button class="btn btn-primary mb-3" id="addAnnouncementBtn">➕ 发布公告</button>
+                        <div id="announcementManageList"></div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default" id="contentFeedback" style="display:none;">
+                    <div class="panel-heading">📝 意见反馈管理</div>
+                    <div class="panel-body">
+                        <div class="mb-3">
+                            <button class="btn btn-default" id="filterAllFeedback">全部</button>
+                            <button class="btn btn-warning" id="filterUnreadFeedback">未读</button>
+                            <button class="btn btn-success" id="filterReadFeedback">已读</button>
+                        </div>
+                        <div id="feedbackManageList"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>2026光影存证 · 摄影作品投票存证平台 让每一束光都有据可查</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/blockchain.js"></script>
+    <script src="js/app.js?v=1.3.4"></script>
+
+    <!-- 作品详情模态框 -->
+    <div class="modal fade" id="workDetailModal" tabindex="-1" role="dialog" aria-labelledby="workDetailModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="workDetailModalLabel">📸 作品详情</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="modalWorkImg" src="" class="img-thumbnail" style="width:100%;">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>作品名称</label>
+                                <input type="text" id="modalWorkName" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>作者</label>
+                                <input type="text" id="modalAuthor" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>分类</label>
+                                <input type="text" id="modalCategory" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>拍摄设备</label>
+                                <input type="text" id="modalEquipment" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>赛事</label>
+                                <input type="text" id="modalTournament" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>创建时间</label>
+                                <input type="text" id="modalCreateTime" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>当前状态</label>
+                                <input type="text" id="modalStatus" class="form-control" readonly>
+                            </div>
+                            <div id="modalRejectInfo" style="display:none;">
+                                <div class="form-group">
+                                    <label>驳回理由</label>
+                                    <input type="text" id="modalRejectReason" class="form-control" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>驳回时间</label>
+                                    <input type="text" id="modalRejectTime" class="form-control" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label>作品简介</label>
+                        <textarea id="modalDesc" class="form-control" rows="4" readonly></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>哈希值</label>
+                        <input type="text" id="modalHash" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>交易哈希</label>
+                        <input type="text" id="modalTxHash" class="form-control" readonly>
+                    </div>
+                    
+                    <div id="modalRejectSection" style="display:none;" class="mt-4 p-3 bg-danger-light">
+                        <h5>❌ 驳回作品</h5>
+                        <div class="form-group">
+                            <label>驳回理由 <span class="text-danger">*</span></label>
+                            <textarea id="rejectReasonInput" class="form-control" rows="3" placeholder="请输入驳回理由..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" id="modalApproveBtn" class="btn btn-success">✅ 通过</button>
+                    <button type="button" id="modalRejectBtn" class="btn btn-danger">❌ 驳回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</html>
