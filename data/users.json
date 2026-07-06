@@ -1,0 +1,72 @@
+{
+    "111": {
+        "account": "111",
+        "password": "111111",
+        "nickName": "资深摄影师-阿山",
+        "role": "photographer",
+        "phone": "13800000111",
+        "bio": "喜欢大自然，专注风光摄影 10 年。",
+        "walletAddress": "0xFFcf8FDEE87062793c230d5225E01326c7104b7B",
+        "walletPrivateKey": "",
+        "ethBalance": 10,
+        "cnyBalance": 5000,
+        "registerTime": "2026-07-06 21:44:44",
+        "status": "normal"
+    },
+    "222": {
+        "account": "222",
+        "password": "222222",
+        "nickName": "大众大众评审-小美",
+        "role": "user",
+        "phone": "13800000222",
+        "bio": "摄影爱好者，喜欢欣赏优秀摄影作品并为它们投票。",
+        "walletAddress": "0x22d491B3A1637fd9C21153d6a2f8E1b31Ed816E8",
+        "walletPrivateKey": "",
+        "ethBalance": 0.5,
+        "cnyBalance": 2000,
+        "registerTime": "2026-07-06 21:44:44",
+        "status": "normal"
+    },
+    "333": {
+        "account": "333",
+        "password": "333333",
+        "nickName": "人像大师-老李",
+        "role": "photographer",
+        "phone": "13800000333",
+        "bio": "定格美丽瞬间，欢迎约拍。",
+        "walletAddress": "0x2287236A9D981f9b36C655F37a57aDF492576bE8",
+        "walletPrivateKey": "",
+        "ethBalance": 8,
+        "cnyBalance": 8000,
+        "registerTime": "2026-07-06 21:44:44",
+        "status": "normal"
+    },
+    "admin": {
+        "account": "admin",
+        "password": "123456",
+        "nickName": "平台系统管理员",
+        "role": "admin",
+        "phone": "13800000000",
+        "bio": "我是超级管理员，负责作品存证与赛事发布审核。",
+        "walletAddress": "0xDE4622eD33DC1BE87f62A21821043C34eB6B7988",
+        "walletPrivateKey": "",
+        "ethBalance": 100,
+        "cnyBalance": 100000,
+        "registerTime": "2026-07-06 21:44:44",
+        "status": "normal"
+    },
+    "admin1": {
+        "account": "admin1",
+        "password": "123456",
+        "nickName": "平台辅助管理员",
+        "role": "admin",
+        "phone": "13800000001",
+        "bio": "平台管理员，处理日常存证与公告发表。",
+        "walletAddress": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+        "walletPrivateKey": "",
+        "ethBalance": 50,
+        "cnyBalance": 50000,
+        "registerTime": "2026-07-06 21:44:44",
+        "status": "normal"
+    }
+}
